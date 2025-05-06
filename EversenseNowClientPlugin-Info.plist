@@ -5,6 +5,6 @@
 	<key>com.loopkit.Loop.CGMManagerDisplayName</key>
 	<string>Eversense Now</string>
 	<key>com.loopkit.Loop.CGMManagerIdentifier</key>
-	<string>NowClient</string>
+	<string>EversenseNowClient</string>
 </dict>
 </plist>

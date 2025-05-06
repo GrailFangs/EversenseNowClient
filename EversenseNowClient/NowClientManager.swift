@@ -11,7 +11,7 @@ import HealthKit
 
 public class NowClientManager: CGMManager {
 
-    public static let pluginIdentifier = "NowClient"
+    public static let pluginIdentifier = "EversenseNowClient"
 
     public init() {
         nowService = NowService(keychainManager: keychain)
