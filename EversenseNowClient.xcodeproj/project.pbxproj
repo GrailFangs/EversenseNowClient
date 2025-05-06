@@ -13,6 +13,10 @@
 		345200C82DC9E56C00F35D78 /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200C52DC9E56C00F35D78 /* LoopKitUI.framework */; };
 		345200CD2DC9E58B00F35D78 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200CB2DC9E58B00F35D78 /* LoopKit.framework */; };
 		345200CF2DC9E58B00F35D78 /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200CC2DC9E58B00F35D78 /* LoopKitUI.framework */; };
+		34FE52412DCA9E0C0085263A /* EversenseNowClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200122DC9D66E00F35D78 /* EversenseNowClient.framework */; };
+		34FE52422DCA9E0C0085263A /* EversenseNowClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 345200122DC9D66E00F35D78 /* EversenseNowClient.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34FE52442DCA9E0E0085263A /* NowClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200492DC9D83600F35D78 /* NowClientUI.framework */; };
+		34FE52452DCA9E0E0085263A /* NowClientUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 345200492DC9D83600F35D78 /* NowClientUI.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,21 @@
 			remoteInfo = NowClientUI;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		34FE52432DCA9E0C0085263A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				34FE52452DCA9E0E0085263A /* NowClientUI.framework in Embed Frameworks */,
+				34FE52422DCA9E0C0085263A /* EversenseNowClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		345200122DC9D66E00F35D78 /* EversenseNowClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EversenseNowClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +162,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34FE52442DCA9E0E0085263A /* NowClientUI.framework in Frameworks */,
+				34FE52412DCA9E0C0085263A /* EversenseNowClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +280,7 @@
 				34FE51952DCA08750085263A /* Sources */,
 				34FE51962DCA08750085263A /* Frameworks */,
 				34FE51972DCA08750085263A /* Resources */,
+				34FE52432DCA9E0C0085263A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
