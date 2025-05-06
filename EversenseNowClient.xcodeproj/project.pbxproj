@@ -6,14 +6,90 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3452003E2DC9D6E200F35D78 /* LoopKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3452003D2DC9D6E200F35D78 /* LoopKit */; };
+		345200402DC9D6E200F35D78 /* LoopKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3452003F2DC9D6E200F35D78 /* LoopKitUI */; };
+		345200432DC9D6EF00F35D78 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200422DC9D6EF00F35D78 /* HealthKit.framework */; };
+		3452006A2DC9D90F00F35D78 /* LoopKit in Frameworks */ = {isa = PBXBuildFile; productRef = 345200692DC9D90F00F35D78 /* LoopKit */; };
+		3452006C2DC9D90F00F35D78 /* LoopKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3452006B2DC9D90F00F35D78 /* LoopKitUI */; };
+		3452006D2DC9D90F00F35D78 /* EversenseNowClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200122DC9D66E00F35D78 /* EversenseNowClient.framework */; };
+		345200922DC9DA3900F35D78 /* EversenseNowClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200122DC9D66E00F35D78 /* EversenseNowClient.framework */; };
+		345200932DC9DA3900F35D78 /* NowClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200492DC9D83600F35D78 /* NowClientUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3452006E2DC9D92000F35D78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 345200092DC9D66E00F35D78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 345200112DC9D66E00F35D78;
+			remoteInfo = EversenseNowClient;
+		};
+		3452008C2DC9DA0F00F35D78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 345200092DC9D66E00F35D78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 345200112DC9D66E00F35D78;
+			remoteInfo = EversenseNowClient;
+		};
+		3452008E2DC9DA0F00F35D78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 345200092DC9D66E00F35D78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 345200482DC9D83600F35D78;
+			remoteInfo = NowClientUI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		345200122DC9D66E00F35D78 /* EversenseNowClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EversenseNowClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345200422DC9D6EF00F35D78 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		345200492DC9D83600F35D78 /* NowClientUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NowClientUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345200812DC9D9B600F35D78 /* NowClientPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NowClientPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		345200682DC9D8EA00F35D78 /* Exceptions for "Common" folder in "NowClientUI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LocalizedString.swift,
+			);
+			target = 345200482DC9D83600F35D78 /* NowClientUI */;
+		};
+		345200912DC9DA2C00F35D78 /* Exceptions for "EversenseNowClient" folder in "NowClientPlugin" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				OSLog.swift,
+			);
+			target = 345200802DC9D9B600F35D78 /* NowClientPlugin */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		345200142DC9D66E00F35D78 /* EversenseNowClient */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				345200912DC9DA2C00F35D78 /* Exceptions for "EversenseNowClient" folder in "NowClientPlugin" target */,
+			);
 			path = EversenseNowClient;
+			sourceTree = "<group>";
+		};
+		345200392DC9D6A600F35D78 /* Common */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				345200682DC9D8EA00F35D78 /* Exceptions for "Common" folder in "NowClientUI" target */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3452004A2DC9D83600F35D78 /* NowClientUI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NowClientUI;
+			sourceTree = "<group>";
+		};
+		345200822DC9D9B600F35D78 /* NowClientPlugin */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NowClientPlugin;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +99,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345200432DC9D6EF00F35D78 /* HealthKit.framework in Frameworks */,
+				3452003E2DC9D6E200F35D78 /* LoopKit in Frameworks */,
+				345200402DC9D6E200F35D78 /* LoopKitUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		345200462DC9D83600F35D78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3452006D2DC9D90F00F35D78 /* EversenseNowClient.framework in Frameworks */,
+				3452006A2DC9D90F00F35D78 /* LoopKit in Frameworks */,
+				3452006C2DC9D90F00F35D78 /* LoopKitUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3452007E2DC9D9B600F35D78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345200922DC9DA3900F35D78 /* EversenseNowClient.framework in Frameworks */,
+				345200932DC9DA3900F35D78 /* NowClientUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +130,11 @@
 		345200082DC9D66E00F35D78 = {
 			isa = PBXGroup;
 			children = (
+				345200392DC9D6A600F35D78 /* Common */,
 				345200142DC9D66E00F35D78 /* EversenseNowClient */,
+				3452004A2DC9D83600F35D78 /* NowClientUI */,
+				345200822DC9D9B600F35D78 /* NowClientPlugin */,
+				345200412DC9D6EF00F35D78 /* Frameworks */,
 				345200132DC9D66E00F35D78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,14 +143,38 @@
 			isa = PBXGroup;
 			children = (
 				345200122DC9D66E00F35D78 /* EversenseNowClient.framework */,
+				345200492DC9D83600F35D78 /* NowClientUI.framework */,
+				345200812DC9D9B600F35D78 /* NowClientPlugin.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		345200412DC9D6EF00F35D78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				345200422DC9D6EF00F35D78 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
 		3452000D2DC9D66E00F35D78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		345200442DC9D83600F35D78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3452007C2DC9D9B600F35D78 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,12 +199,66 @@
 			);
 			fileSystemSynchronizedGroups = (
 				345200142DC9D66E00F35D78 /* EversenseNowClient */,
+				345200392DC9D6A600F35D78 /* Common */,
 			);
 			name = EversenseNowClient;
 			packageProductDependencies = (
+				3452003D2DC9D6E200F35D78 /* LoopKit */,
+				3452003F2DC9D6E200F35D78 /* LoopKitUI */,
 			);
 			productName = EversenseNowClient;
 			productReference = 345200122DC9D66E00F35D78 /* EversenseNowClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		345200482DC9D83600F35D78 /* NowClientUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3452004D2DC9D83600F35D78 /* Build configuration list for PBXNativeTarget "NowClientUI" */;
+			buildPhases = (
+				345200442DC9D83600F35D78 /* Headers */,
+				345200452DC9D83600F35D78 /* Sources */,
+				345200462DC9D83600F35D78 /* Frameworks */,
+				345200472DC9D83600F35D78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3452006F2DC9D92000F35D78 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3452004A2DC9D83600F35D78 /* NowClientUI */,
+			);
+			name = NowClientUI;
+			packageProductDependencies = (
+				345200692DC9D90F00F35D78 /* LoopKit */,
+				3452006B2DC9D90F00F35D78 /* LoopKitUI */,
+			);
+			productName = NowClientUI;
+			productReference = 345200492DC9D83600F35D78 /* NowClientUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		345200802DC9D9B600F35D78 /* NowClientPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 345200852DC9D9B600F35D78 /* Build configuration list for PBXNativeTarget "NowClientPlugin" */;
+			buildPhases = (
+				3452007C2DC9D9B600F35D78 /* Headers */,
+				3452007D2DC9D9B600F35D78 /* Sources */,
+				3452007E2DC9D9B600F35D78 /* Frameworks */,
+				3452007F2DC9D9B600F35D78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3452008D2DC9DA0F00F35D78 /* PBXTargetDependency */,
+				3452008F2DC9DA0F00F35D78 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				345200822DC9D9B600F35D78 /* NowClientPlugin */,
+			);
+			name = NowClientPlugin;
+			packageProductDependencies = (
+			);
+			productName = NowClientPlugin;
+			productReference = 345200812DC9D9B600F35D78 /* NowClientPlugin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -94,6 +274,13 @@
 					345200112DC9D66E00F35D78 = {
 						CreatedOnToolsVersion = 16.3;
 					};
+					345200482DC9D83600F35D78 = {
+						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
+					};
+					345200802DC9D9B600F35D78 = {
+						CreatedOnToolsVersion = 16.3;
+					};
 				};
 			};
 			buildConfigurationList = 3452000C2DC9D66E00F35D78 /* Build configuration list for PBXProject "EversenseNowClient" */;
@@ -105,18 +292,37 @@
 			);
 			mainGroup = 345200082DC9D66E00F35D78;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 345200132DC9D66E00F35D78 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				345200112DC9D66E00F35D78 /* EversenseNowClient */,
+				345200482DC9D83600F35D78 /* NowClientUI */,
+				345200802DC9D9B600F35D78 /* NowClientPlugin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		345200102DC9D66E00F35D78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		345200472DC9D83600F35D78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3452007F2DC9D9B600F35D78 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,7 +339,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		345200452DC9D83600F35D78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3452007D2DC9D9B600F35D78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3452006F2DC9D92000F35D78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 345200112DC9D66E00F35D78 /* EversenseNowClient */;
+			targetProxy = 3452006E2DC9D92000F35D78 /* PBXContainerItemProxy */;
+		};
+		3452008D2DC9DA0F00F35D78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 345200112DC9D66E00F35D78 /* EversenseNowClient */;
+			targetProxy = 3452008C2DC9DA0F00F35D78 /* PBXContainerItemProxy */;
+		};
+		3452008F2DC9DA0F00F35D78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 345200482DC9D83600F35D78 /* NowClientUI */;
+			targetProxy = 3452008E2DC9DA0F00F35D78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		345200172DC9D66E00F35D78 /* Debug */ = {
@@ -329,6 +567,143 @@
 			};
 			name = Release;
 		};
+		3452004E2DC9D83600F35D78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6H5AQ9JDNV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = edhi.NowClientUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3452004F2DC9D83600F35D78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6H5AQ9JDNV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = edhi.NowClientUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		345200862DC9D9B600F35D78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H5AQ9JDNV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = edhi.NowClientPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		345200872DC9D9B600F35D78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H5AQ9JDNV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = edhi.NowClientPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -350,7 +725,59 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3452004D2DC9D83600F35D78 /* Build configuration list for PBXNativeTarget "NowClientUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3452004E2DC9D83600F35D78 /* Debug */,
+				3452004F2DC9D83600F35D78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		345200852DC9D9B600F35D78 /* Build configuration list for PBXNativeTarget "NowClientPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345200862DC9D9B600F35D78 /* Debug */,
+				345200872DC9D9B600F35D78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LoopKit/LoopKit";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3452003D2DC9D6E200F35D78 /* LoopKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */;
+			productName = LoopKit;
+		};
+		3452003F2DC9D6E200F35D78 /* LoopKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */;
+			productName = LoopKitUI;
+		};
+		345200692DC9D90F00F35D78 /* LoopKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */;
+			productName = LoopKit;
+		};
+		3452006B2DC9D90F00F35D78 /* LoopKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */;
+			productName = LoopKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 345200092DC9D66E00F35D78 /* Project object */;
 }
