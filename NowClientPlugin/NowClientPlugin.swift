@@ -6,13 +6,13 @@
 //  Copyright © 2019 Mark Wilson. All rights reserved.
 //
 
-import os.log
+//import os.log
 import LoopKitUI
 import EversenseNowClient
 import NowClientUI
 
 class NowClientPlugin: NSObject, CGMManagerUIPlugin {
-    private let log = OSLog(category: "NowClientPlugin")
+//    private let log = OSLog(category: "NowClientPlugin")
     
     public var cgmManagerType: CGMManagerUI.Type? {
         return NowClientManager.self
@@ -20,6 +20,6 @@ class NowClientPlugin: NSObject, CGMManagerUIPlugin {
     
     override init() {
         super.init()
-        log.default("Instantiated")
+//        log.default("Instantiated")
     }
 }

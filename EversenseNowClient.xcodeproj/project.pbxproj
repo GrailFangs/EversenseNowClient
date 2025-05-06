@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		345200432DC9D6EF00F35D78 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200422DC9D6EF00F35D78 /* HealthKit.framework */; };
 		3452006D2DC9D90F00F35D78 /* EversenseNowClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200122DC9D66E00F35D78 /* EversenseNowClient.framework */; };
-		345200932DC9DA3900F35D78 /* NowClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200492DC9D83600F35D78 /* NowClientUI.framework */; };
 		345200C62DC9E56C00F35D78 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200C42DC9E56C00F35D78 /* LoopKit.framework */; };
 		345200C82DC9E56C00F35D78 /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200C52DC9E56C00F35D78 /* LoopKitUI.framework */; };
 		345200CD2DC9E58B00F35D78 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200CB2DC9E58B00F35D78 /* LoopKit.framework */; };
@@ -30,12 +29,12 @@
 		345200122DC9D66E00F35D78 /* EversenseNowClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EversenseNowClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345200422DC9D6EF00F35D78 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		345200492DC9D83600F35D78 /* NowClientUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NowClientUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		34FE51992DCA08750085263A /* EversenseNowClientPlugin.loopplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EversenseNowClientPlugin.loopplugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		34FE51DC2DCA09B90085263A /* EversenseNowClientPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EversenseNowClientPlugin-Info.plist"; sourceTree = "<group>"; };
 		345200C42DC9E56C00F35D78 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345200C52DC9E56C00F35D78 /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345200CB2DC9E58B00F35D78 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345200CC2DC9E58B00F35D78 /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34FE51992DCA08750085263A /* EversenseNowClientPlugin.loopplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EversenseNowClientPlugin.loopplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		34FE51DC2DCA09B90085263A /* EversenseNowClientPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EversenseNowClientPlugin-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,20 +44,6 @@
 				LocalizedString.swift,
 			);
 			target = 345200482DC9D83600F35D78 /* NowClientUI */;
-		};
-		34FE51A72DCA08E20085263A /* Exceptions for "NowClientPlugin" folder in "EversenseNowClientPlugin" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				NowClientPlugin.swift,
-			);
-			target = 34FE51982DCA08750085263A /* EversenseNowClientPlugin */;
-		};
-		34FE51A92DCA08EA0085263A /* Exceptions for "EversenseNowClient" folder in "EversenseNowClientPlugin" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				OSLog.swift,
-			);
-			target = 34FE51982DCA08750085263A /* EversenseNowClientPlugin */;
 		};
 		345200D22DC9EBEB00F35D78 /* Exceptions for "EversenseNowClient" folder in "EversenseNowClient" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -74,15 +59,12 @@
 			);
 			target = 345200482DC9D83600F35D78 /* NowClientUI */;
 		};
-		345200D42DC9EC0700F35D78 /* Exceptions for "NowClientPlugin" folder in "NowClientPlugin" target */ = {
+		34FE51A72DCA08E20085263A /* Exceptions for "NowClientPlugin" folder in "EversenseNowClientPlugin" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				NowClientPlugin.swift,
 			);
-			publicHeaders = (
-				"NowClientPlugin-Bridging-Header.h",
-			);
-			target = 345200802DC9D9B600F35D78 /* NowClientPlugin */;
+			target = 34FE51982DCA08750085263A /* EversenseNowClientPlugin */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -91,7 +73,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				345200D22DC9EBEB00F35D78 /* Exceptions for "EversenseNowClient" folder in "EversenseNowClient" target */,
-				345200912DC9DA2C00F35D78 /* Exceptions for "EversenseNowClient" folder in "NowClientPlugin" target */,
 			);
 			path = EversenseNowClient;
 			sourceTree = "<group>";
@@ -659,15 +640,17 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edhi.EversenseNowClientPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = loopplugin;
 			};
@@ -687,15 +670,17 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edhi.EversenseNowClientPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = loopplugin;
 			};
