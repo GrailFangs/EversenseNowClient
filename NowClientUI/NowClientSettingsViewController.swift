@@ -10,7 +10,7 @@ import Combine
 import HealthKit
 import LoopKit
 import LoopKitUI
-import NowClient
+import EversenseNowClient
 
 public class NowClientSettingsViewController: UITableViewController {
 

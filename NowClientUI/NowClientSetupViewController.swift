@@ -8,7 +8,7 @@
 import UIKit
 import LoopKit
 import LoopKitUI
-import NowClient
+import EversenseNowClient
 
 
 class NowClientSetupViewController: UINavigationController, CGMManagerOnboarding, CompletionNotifying {

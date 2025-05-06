@@ -8,7 +8,7 @@
 
 import os.log
 import LoopKitUI
-import NowClient
+import EversenseNowClient
 import NowClientUI
 
 class NowClientPlugin: NSObject, CGMManagerUIPlugin {

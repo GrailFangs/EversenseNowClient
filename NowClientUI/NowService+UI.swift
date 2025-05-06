@@ -6,7 +6,7 @@
 //
 
 import LoopKitUI
-import NowClient
+import EversenseNowClient
 
 
 extension NowService: ServiceAuthenticationUI {
