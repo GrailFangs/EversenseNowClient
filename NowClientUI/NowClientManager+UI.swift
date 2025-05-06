@@ -9,7 +9,7 @@ import SwiftUI
 import LoopKit
 import LoopKitUI
 import HealthKit
-import NowClient
+import EversenseNowClient
 
 extension NowClientManager: CGMManagerUI {
     public static var onboardingImage: UIImage? {

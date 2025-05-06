@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3452003E2DC9D6E200F35D78 /* LoopKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3452003D2DC9D6E200F35D78 /* LoopKit */; };
-		345200402DC9D6E200F35D78 /* LoopKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3452003F2DC9D6E200F35D78 /* LoopKitUI */; };
 		345200432DC9D6EF00F35D78 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200422DC9D6EF00F35D78 /* HealthKit.framework */; };
-		3452006A2DC9D90F00F35D78 /* LoopKit in Frameworks */ = {isa = PBXBuildFile; productRef = 345200692DC9D90F00F35D78 /* LoopKit */; };
-		3452006C2DC9D90F00F35D78 /* LoopKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3452006B2DC9D90F00F35D78 /* LoopKitUI */; };
 		3452006D2DC9D90F00F35D78 /* EversenseNowClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200122DC9D66E00F35D78 /* EversenseNowClient.framework */; };
 		345200922DC9DA3900F35D78 /* EversenseNowClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200122DC9D66E00F35D78 /* EversenseNowClient.framework */; };
 		345200932DC9DA3900F35D78 /* NowClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200492DC9D83600F35D78 /* NowClientUI.framework */; };
+		345200C62DC9E56C00F35D78 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200C42DC9E56C00F35D78 /* LoopKit.framework */; };
+		345200C82DC9E56C00F35D78 /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200C52DC9E56C00F35D78 /* LoopKitUI.framework */; };
+		345200CD2DC9E58B00F35D78 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200CB2DC9E58B00F35D78 /* LoopKit.framework */; };
+		345200CF2DC9E58B00F35D78 /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345200CC2DC9E58B00F35D78 /* LoopKitUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,10 @@
 		345200422DC9D6EF00F35D78 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		345200492DC9D83600F35D78 /* NowClientUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NowClientUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345200812DC9D9B600F35D78 /* NowClientPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NowClientPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345200C42DC9E56C00F35D78 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345200C52DC9E56C00F35D78 /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345200CB2DC9E58B00F35D78 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345200CC2DC9E58B00F35D78 /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -63,12 +67,34 @@
 			);
 			target = 345200802DC9D9B600F35D78 /* NowClientPlugin */;
 		};
+		345200D22DC9EBEB00F35D78 /* Exceptions for "EversenseNowClient" folder in "EversenseNowClient" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				NowClient.h,
+			);
+			target = 345200112DC9D66E00F35D78 /* EversenseNowClient */;
+		};
+		345200D32DC9EBFF00F35D78 /* Exceptions for "NowClientUI" folder in "NowClientUI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				NowClientUI.h,
+			);
+			target = 345200482DC9D83600F35D78 /* NowClientUI */;
+		};
+		345200D42DC9EC0700F35D78 /* Exceptions for "NowClientPlugin" folder in "NowClientPlugin" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				"NowClientPlugin-Bridging-Header.h",
+			);
+			target = 345200802DC9D9B600F35D78 /* NowClientPlugin */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		345200142DC9D66E00F35D78 /* EversenseNowClient */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				345200D22DC9EBEB00F35D78 /* Exceptions for "EversenseNowClient" folder in "EversenseNowClient" target */,
 				345200912DC9DA2C00F35D78 /* Exceptions for "EversenseNowClient" folder in "NowClientPlugin" target */,
 			);
 			path = EversenseNowClient;
@@ -84,11 +110,17 @@
 		};
 		3452004A2DC9D83600F35D78 /* NowClientUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				345200D32DC9EBFF00F35D78 /* Exceptions for "NowClientUI" folder in "NowClientUI" target */,
+			);
 			path = NowClientUI;
 			sourceTree = "<group>";
 		};
 		345200822DC9D9B600F35D78 /* NowClientPlugin */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				345200D42DC9EC0700F35D78 /* Exceptions for "NowClientPlugin" folder in "NowClientPlugin" target */,
+			);
 			path = NowClientPlugin;
 			sourceTree = "<group>";
 		};
@@ -100,8 +132,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				345200432DC9D6EF00F35D78 /* HealthKit.framework in Frameworks */,
-				3452003E2DC9D6E200F35D78 /* LoopKit in Frameworks */,
-				345200402DC9D6E200F35D78 /* LoopKitUI in Frameworks */,
+				345200C82DC9E56C00F35D78 /* LoopKitUI.framework in Frameworks */,
+				345200C62DC9E56C00F35D78 /* LoopKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3452006D2DC9D90F00F35D78 /* EversenseNowClient.framework in Frameworks */,
-				3452006A2DC9D90F00F35D78 /* LoopKit in Frameworks */,
-				3452006C2DC9D90F00F35D78 /* LoopKitUI in Frameworks */,
+				345200CD2DC9E58B00F35D78 /* LoopKit.framework in Frameworks */,
+				345200CF2DC9E58B00F35D78 /* LoopKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +184,10 @@
 		345200412DC9D6EF00F35D78 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				345200CB2DC9E58B00F35D78 /* LoopKit.framework */,
+				345200CC2DC9E58B00F35D78 /* LoopKitUI.framework */,
+				345200C42DC9E56C00F35D78 /* LoopKit.framework */,
+				345200C52DC9E56C00F35D78 /* LoopKitUI.framework */,
 				345200422DC9D6EF00F35D78 /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -203,8 +239,6 @@
 			);
 			name = EversenseNowClient;
 			packageProductDependencies = (
-				3452003D2DC9D6E200F35D78 /* LoopKit */,
-				3452003F2DC9D6E200F35D78 /* LoopKitUI */,
 			);
 			productName = EversenseNowClient;
 			productReference = 345200122DC9D66E00F35D78 /* EversenseNowClient.framework */;
@@ -229,8 +263,6 @@
 			);
 			name = NowClientUI;
 			packageProductDependencies = (
-				345200692DC9D90F00F35D78 /* LoopKit */,
-				3452006B2DC9D90F00F35D78 /* LoopKitUI */,
 			);
 			productName = NowClientUI;
 			productReference = 345200492DC9D83600F35D78 /* NowClientUI.framework */;
@@ -293,7 +325,6 @@
 			mainGroup = 345200082DC9D66E00F35D78;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 345200132DC9D66E00F35D78 /* Products */;
@@ -505,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H5AQ9JDNV;
@@ -538,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H5AQ9JDNV;
@@ -572,6 +605,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -608,6 +642,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -642,6 +677,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H5AQ9JDNV;
@@ -675,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H5AQ9JDNV;
@@ -744,40 +781,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/LoopKit/LoopKit";
-			requirement = {
-				branch = dev;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3452003D2DC9D6E200F35D78 /* LoopKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */;
-			productName = LoopKit;
-		};
-		3452003F2DC9D6E200F35D78 /* LoopKitUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */;
-			productName = LoopKitUI;
-		};
-		345200692DC9D90F00F35D78 /* LoopKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */;
-			productName = LoopKit;
-		};
-		3452006B2DC9D90F00F35D78 /* LoopKitUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3452003C2DC9D6E200F35D78 /* XCRemoteSwiftPackageReference "LoopKit" */;
-			productName = LoopKitUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 345200092DC9D66E00F35D78 /* Project object */;
 }
