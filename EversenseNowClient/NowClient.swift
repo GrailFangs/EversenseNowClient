@@ -126,11 +126,30 @@ public class NowClient {
                 if let patient = patientData.first {
                     do {
                         let timestamp = try self.parseDate(patient.cgTime)
+                        let trend: Int?
+                        if let nowTrend = patient.glucoseTrend as? Int{
+//                            # public final class GlucoseTrendArrow {
+//                            #     private static final int STALE = 0;
+//
+//                            #     /* renamed from: Companion, reason: from kotlin metadata */
+//                            #     public static final Companion INSTANCE = new Companion(null);
+//                            #     private static final int FALLING_FAST = 1;
+//                            #     private static final int FALLING = 2;
+//                            #     private static final int FLAT = 3;
+//                            #     private static final int RISING = 4;
+//                            #     private static final int RISING_FAST = 5;
+//                            #     private static final int FALLING_RAPID = 6;
+//                            #     private static final int RAISING_RAPID = 7;
+                            let trendmap = [0: 0, 7: 1, 5: 2, 4: 3, 3: 4, 2: 5, 1: 6, 6: 7]
+                            trend = trendmap[nowTrend, default: 0]
+                        } else {
+                            trend = patient.glucoseTrend
+                        }
                         callback(
                             nil,
                             NowGlucose(
                                 glucose: UInt16(patient.currentGlucose),
-                                trend: UInt8(patient.glucoseTrend),
+                                trend: UInt8(trend ?? 0),
                                 timestamp: timestamp
                             )
                         )
