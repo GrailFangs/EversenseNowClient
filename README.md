@@ -1,6 +1,6 @@
 Plugin to allow eversense cgm use with Loop app, and maybe others too.
 
-It works by using Eversense Now, a dexcom share equivilant.
+It works by using Eversense Now, a dexcom share equivalent.
 
 Set up an eversense now account and invite it to your main account circle
 
