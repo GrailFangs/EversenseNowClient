@@ -48,14 +48,14 @@ public class NowClient {
         let passwordPart = "password=\(password)"
         let grantTypePart = "grant_type=password"
         let clientIdPart = "client_id=eversenseMMAiOS"
-        let clientSecretPart = #"client_secret=vYL4yrvM_E"K"# 
+        let clientSecretPart = #"client_secret=vYL4yrvM_E"K"#
         let bodyString = [
             usernamePart,
             passwordPart,
             grantTypePart,
             clientIdPart,
             clientSecretPart
-        ].joined(separator: "&")        
+        ].joined(separator: "&")
         request.httpBody = bodyString.data(using: .utf8)
         
         print("Sending authentication request")
@@ -66,10 +66,16 @@ public class NowClient {
                 return
             }
             
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(NSError(domain: "NowClient", code: 1, userInfo: [NSLocalizedDescriptionKey: "Invalid response type"]))
+                return
+            }
+            
             guard let data = data else {
                 completion(NSError(domain: "NowClient", code: 1, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
                 return
             }
+            
             
             if let tokenResponse = try? JSONDecoder().decode(NowToken.self, from: data) {
                 do {
@@ -86,7 +92,7 @@ public class NowClient {
     }
 
 
-    public func fetchFollowingPatientList( completion: @escaping (Error?, PatientData?) -> Void) {
+    public func fetchFollowingPatientList(completion: @escaping (Error?, PatientData?) -> Void) {
         guard let token = tokenStorage.getEversenseNowAccessToken() else {
             completion(NowError.dataError(reason: "Not authenticated"), nil)
             return
@@ -102,7 +108,24 @@ public class NowClient {
         request.setValue("en-US,en;q=0.9", forHTTPHeaderField: "Accept-Language")
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
+           
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(NowError.dataError(reason: "Invalid response type"), nil)
+                return
+            }
 
+            if httpResponse.statusCode == 401  {
+                // Token expired, attempt to refresh
+                self.authenticate { error in
+                    if let error = error {
+                        completion(error, nil)
+                        return
+                    }
+                    completion(nil,nil)
+                    return
+                }
+            }
+            
             guard let data = data else {
                 completion(NowError.dataError(reason: "No data received"), nil)
                 return
@@ -117,6 +140,7 @@ public class NowClient {
         }
         task.resume()
     }
+    
     public func fetchLast(callback: @escaping (NowError?, NowGlucose?) -> Void) {
         fetchFollowingPatientList { (error, patientData) in
             if let error = error {
