@@ -1,10 +1,3 @@
-//
-//  NowClientSetupViewController.swift
-//  Loop
-//
-//  Copyright © 2018 LoopKit Authors. All rights reserved.
-//
-
 import UIKit
 import LoopKit
 import LoopKitUI

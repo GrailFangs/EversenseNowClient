@@ -1,11 +1,3 @@
-//
-//  NowClientPlugin.swift
-//  NowClientPlugin
-//
-//  Created by Nathaniel Hamming on 2019-12-19.
-//  Copyright © 2019 Mark Wilson. All rights reserved.
-//
-
 import os.log
 import LoopKitUI
 import EversenseNowClient

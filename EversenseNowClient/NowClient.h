@@ -1,11 +1,3 @@
-//
-//  NowClient.h
-//  NowClient
-//
-//  Created by Nathan Racklyeft on 5/8/16.
-//  Copyright © 2016 Mark Wilson. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 //! Project version number for NowClient.

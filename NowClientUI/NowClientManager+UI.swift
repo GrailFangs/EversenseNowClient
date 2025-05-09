@@ -1,10 +1,3 @@
-//
-//  NowClientManager+UI.swift
-//  Loop
-//
-//  Copyright © 2018 LoopKit Authors. All rights reserved.
-//
-
 import SwiftUI
 import LoopKit
 import LoopKitUI

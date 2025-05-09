@@ -1,10 +1,3 @@
-//
-//  NowClientSettingsViewController.swift
-//  Loop
-//
-//  Copyright © 2018 LoopKit Authors. All rights reserved.
-//
-
 import UIKit
 import Combine
 import HealthKit
