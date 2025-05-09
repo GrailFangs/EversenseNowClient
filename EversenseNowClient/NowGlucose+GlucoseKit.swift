@@ -28,7 +28,7 @@ extension NowGlucose: GlucoseValue {
 
 extension NowGlucose: GlucoseDisplayable {
     public var isStateValid: Bool {
-        return glucose >= 39
+        return glucose >= 39 && glucose < 400
     }
 
     public var trendType: GlucoseTrend? {
